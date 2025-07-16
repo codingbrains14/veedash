@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veedash Refrigeration Works</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .shop-board {
+      position: relative;
+      background: url('https://mumbaiacrepair.in/wp-content/uploads/2023/09/ac-bnr.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 40px 15px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      border: 4px solid #fff;
+      border-radius: 16px;
+      text-align: center;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .shop-board::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .shop-title {
+      font-size: 2.8rem;
+    }
+
+    .shop-phone {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .hero {
+      min-height: 80vh;
+      background: url('https://www.shutterstock.com/image-photo/technician-uniform-using-tablet-check-600nw-2289993717.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .hero .overlay h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .btn-animated {
+      transition: all 0.3s ease;
+    }
+
+    .btn-animated:hover {
+      transform: scale(1.05);
+      background-color: #fff !important;
+      color: #0d6efd !important;
+    }
+
+    .services .card {
+      border: none;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .services .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .services img {
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .map-responsive {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+    }
+
+    .map-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      background: #212529;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    .whatsapp-mobile {
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      z-index: 9999;
+      display: block;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-mobile img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-mobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero .overlay h1 {
+        font-size: 2rem;
+      }
+
+      .shop-title {
+        font-size: 2rem;
+      }
+
+      .shop-phone {
+        font-size: 1.2rem;
+      }
+
+      .hero {
+        height: auto;
+        padding: 60px 0;
+      }
+
+      .hero .overlay {
+        padding: 20px;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+    }
+    .map-responsive {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Shop Name Board -->
+  <div class="shop-board">
+    <div class="shop-title">🛠️ Veedash Refrigeration Works</div>
+    <div class="shop-phone">📞 NagaKumar 9705856564<br> 📞 Purna Venkat 9948244168</div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-in">
+    <div class="overlay text-white">
+      <div class="container">
+        <h1 class="display-5">Keep Your Space Cool with Veedash Refrigeration Works</h1>
+        <p class="lead">Professional AC installation, maintenance and repair services you can trust.</p>
+        <a href="#contact" class="btn btn-light btn-lg mt-3 btn-animated">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Our HVAC Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card p-4 shadow-sm">
+            <img src="https://shyamalicoolingpoint.com/wp-content/uploads/2023/01/ac-repairing-kolkata.jpg" alt="Service Image">
+            <h5 class="card-title mt-3">AC Installation</h5>
+            <p class="card-text">Expert AC installation for homes and commercial spaces.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card p-4 shadow-sm">
+            <img src="https://techsquadteam.com/assets/profile/blogimages/f00ab4df455700aeb2ff86da0cb79fe2.png" alt="Service Image">
+            <h5 class="card-title mt-3">Maintenance & Repair</h5>
+            <p class="card-text">Keep your system running smoothly with regular servicing.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card p-4 shadow-sm">
+            <img src="https://24x7homeservice.com/wp-content/uploads/2020/10/ac-repair.jpg" alt="Service Image">
+            <h5 class="card-title mt-3">Annual Contracts</h5>
+            <p class="card-text">Enjoy priority service and seasonal checkups year-round.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h2>About AC Business</h2>
+          <p>With over a decade of HVAC experience, we offer trusted, affordable services and unmatched customer satisfaction.</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="https://nadeemacservice.pk/wp-content/uploads/2022/11/Air-Conditioning-lahore-1024x818.jpg" alt="About Us" class="about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5" id="contact">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="zoom-in">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form shadow" data-aos="fade-up">
+            <input type="hidden" name="access_key" value="1494ca10-0c29-486b-9095-3ebd772b6203">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea name="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div id="form-status" class="text-success mb-3" style="display: none;">Message sent successfully!</div>
+            <button class="btn btn-primary w-100 btn-animated" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="zoom-in">Our Location</h2>
+    <div class="map-responsive" data-aos="fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15287.861239845686!2d82.023!3d16.588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a382c7cd5c3b54b%3A0xd2cbac76e1c5db4e!2sAnathavaram%2C%20Andhra%20Pradesh%20533876!5e0!3m2!1sen!2sin!4v1721141460000!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer data-aos="fade-in">
+    <div class="container">&copy; 2025 Manikanta Shop. All rights reserved.</div>
+  </footer>
+
+  <!-- WhatsApp Mobile Button -->
+  <a href="https://wa.me/919652592663?text=Hi%20Manikanta%20Shop%2C%20I%20am%20interested%20in%20your%20AC%20services"
+     class="whatsapp-mobile"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const form = document.querySelector("form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+      if (res.ok) {
+        form.reset();
+        status.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
